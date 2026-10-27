@@ -1,7 +1,7 @@
 *{
         margin: 0%;
         font-family: Arial;
-        border: border-box;
+        box-sizing: border-box;
         
 
 }
@@ -256,4 +256,136 @@ ul a {
         /* margin-top: 1px; */
         /* font-size: .87rem;
         text-align: center; */
+}
+
+/* Responsive refinements */
+html {
+        scroll-behavior: smooth;
+}
+
+body {
+        min-width: 320px;
+        overflow-x: hidden;
+}
+
+.navbar {
+        gap: 12px;
+        padding: 0 12px;
+}
+
+.nav-search {
+        flex: 1 1 280px;
+        width: auto;
+        min-width: 0;
+}
+
+.search-input {
+        min-width: 0;
+        padding: 0 8px;
+}
+
+.shop-section {
+        gap: 12px;
+        padding: 12px;
+}
+
+.box {
+        flex: 1 1 calc(25% - 12px);
+        min-width: 220px;
+        max-width: 360px;
+}
+
+.foot-panel2 {
+        gap: 24px;
+        padding: 20px;
+        height: auto;
+        flex-wrap: wrap;
+}
+
+.foot-panel2 ul {
+        min-width: 180px;
+}
+
+@media (max-width: 900px) {
+        .navbar {
+                height: auto;
+                min-height: 60px;
+                flex-wrap: wrap;
+                padding: 10px 12px;
+        }
+
+        .nav-search {
+                order: 10;
+                flex-basis: 100%;
+        }
+
+        .box {
+                flex-basis: calc(50% - 12px);
+        }
+
+        .panel {
+                gap: 12px;
+                padding: 0 12px;
+        }
+
+        .panel-ops {
+                gap: 12px;
+                overflow-x: auto;
+        }
+}
+
+@media (max-width: 520px) {
+        .nav-address,
+        .language,
+        .nav-return {
+                display: none;
+        }
+
+        .nav-signin {
+                font-size: 0.85rem;
+        }
+
+        .panel {
+                overflow-x: auto;
+        }
+
+        .panel-ops {
+                min-width: max-content;
+        }
+
+        .hero-message {
+                margin: 0 10px;
+                font-size: 0.95rem;
+                text-align: center;
+        }
+
+        .box {
+                flex-basis: 100%;
+                max-width: none;
+                height: auto;
+                min-height: 390px;
+        }
+
+        .box-img {
+                height: 280px;
+        }
+
+        .foot-panel2 {
+                justify-content: flex-start;
+        }
+
+        .foot-panel2 ul {
+                min-width: 130px;
+                font-size: 1rem;
+        }
+
+        .foot-panel2 ul a {
+                font-size: 0.9rem;
+        }
+}
+
+@media (prefers-reduced-motion: reduce) {
+        html {
+                scroll-behavior: auto;
+        }
 }
